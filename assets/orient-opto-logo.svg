@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" role="img" aria-label="Orient Opto">
+  <rect width="420" height="120" rx="14" fill="#ffffff"/>
+  <circle cx="54" cy="60" r="30" fill="#0b78d0"/>
+  <path d="M38 78 L70 42 M48 84 L80 48 M28 70 L62 36" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
+  <text x="104" y="58" fill="#0b2f6f" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800">ORIENT</text>
+  <text x="106" y="86" fill="#6b7280" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">OPTO</text>
+  <circle cx="246" cy="35" r="5" fill="#e1193e"/>
+</svg>
