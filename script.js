@@ -381,6 +381,8 @@ const productFamilySections = document.querySelectorAll("[data-family-section]")
 const buildDownloadCell = (download) =>
   download ? `<a href="${download}" download>PDF</a>` : `<button type="button" disabled>Pending</button>`;
 
+const displayProductModel = (model) => (model ? `${model}OV` : "-");
+
 const renderSeriesTable = (seriesKey) => {
   if (!seriesTableBody || !transistorSeries[seriesKey]) return;
 
@@ -388,7 +390,7 @@ const renderSeriesTable = (seriesKey) => {
     .map(([model, grade, input, pkg, size, vf, veco, isolation, saturation, ctrMin, ctrMax, temp, download]) => {
       return `
         <tr>
-          <td><strong>${model}</strong>${grade ? `<small>${grade}</small>` : ""}</td>
+          <td><strong>${displayProductModel(model)}</strong>${grade ? `<small>${grade}</small>` : ""}</td>
           <td>${input || "-"}</td>
           <td>${pkg || "-"}</td>
           <td>${size || "-"}</td>
@@ -412,7 +414,7 @@ const renderOptocouplerTable = (tableBody, rows) => {
   tableBody.innerHTML = rows
     .map(([model, grade, input, pkg, size, vf, veco, isolation, saturation, ctrMin, ctrMax, temp, download]) => `
       <tr>
-        <td><strong>${model}</strong>${grade ? `<small>${grade}</small>` : ""}</td>
+        <td><strong>${displayProductModel(model)}</strong>${grade ? `<small>${grade}</small>` : ""}</td>
         <td>${input || "-"}</td>
         <td>${pkg || "-"}</td>
         <td>${size || "-"}</td>
@@ -435,7 +437,7 @@ const renderHighSpeedTable = (seriesKey) => {
   highSpeedTableBody.innerHTML = highSpeedSeries[seriesKey]
     .map(([model, pkg, size, supply, tphl, isolation, cmr, collector, ctrMin, ctrMax, temp, download]) => `
       <tr>
-        <td><strong>${model}</strong></td>
+        <td><strong>${displayProductModel(model)}</strong></td>
         <td>${pkg || "-"}</td>
         <td>${size || "-"}</td>
         <td>${supply || "-"}</td>
@@ -458,7 +460,7 @@ const renderTriacTable = (seriesKey) => {
   triacTableBody.innerHTML = triacSeries[seriesKey]
     .map(([model, pkg, size, vtm, vinh, vdrm, isolation, inputOrItsm, trigger, rmsOrStorage, temp, download]) => `
       <tr>
-        <td><strong>${model}</strong></td>
+        <td><strong>${displayProductModel(model)}</strong></td>
         <td>${pkg || "-"}</td>
         <td>${size || "-"}</td>
         <td>${vtm || "-"}</td>
@@ -481,7 +483,7 @@ const renderSsrTable = (seriesKey) => {
   ssrTableBody.innerHTML = ssrSeries[seriesKey]
     .map(([model, pkg, size, isolation, loadVoltage, loadCurrent, output, storageTemp, ron, ifon, temp, download]) => `
       <tr>
-        <td><strong>${model}</strong></td>
+        <td><strong>${displayProductModel(model)}</strong></td>
         <td>${pkg || "-"}</td>
         <td>${size || "-"}</td>
         <td>${isolation || "-"}</td>
@@ -506,7 +508,7 @@ const renderSimpleSpecTable = (tableBody, rows) => {
       const download = row[row.length - 1];
       const cells = row
         .slice(0, -1)
-        .map((value, index) => `<td>${index === 0 ? `<strong>${value}</strong>` : value || "-"}</td>`)
+        .map((value, index) => `<td>${index === 0 ? `<strong>${displayProductModel(value)}</strong>` : value || "-"}</td>`)
         .join("");
       return `<tr>${cells}<td>${buildDownloadCell(download)}</td></tr>`;
     })
