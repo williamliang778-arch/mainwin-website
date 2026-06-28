@@ -8,7 +8,7 @@
       name="description"
       content="Mainwin Technology supplies Orient optocouplers and electronic components to international industrial customers."
     />
-    <link rel="stylesheet" href="styles.css?v=20260614-customer-logos-final" />
+    <link rel="stylesheet" href="styles.css?v=20260627-product-menu-local" />
   </head>
   <body>
     <header class="site-header" aria-label="Main navigation">
@@ -22,11 +22,37 @@
       </button>
       <nav class="nav-links">
         <a href="#home">Home</a>
-        <a href="#product">Product</a>
+        <a href="#product-menu" data-product-menu-trigger>Product</a>
+        <a href="gate-drive-optocouplers.html">Gate Drive</a>
         <a href="#about">About Us</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
+
+    <div class="product-menu-overlay" data-product-menu>
+      <button class="product-menu-scrim" type="button" data-product-menu-close aria-label="Close product menu"></button>
+      <aside class="product-menu-panel" id="product-menu" aria-label="Product lines">
+        <button class="product-menu-close" type="button" data-product-menu-close aria-label="Close product menu">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="product-menu-head">
+          <strong>Products</strong>
+          <span>Orient optocoupler lines</span>
+        </div>
+        <nav>
+          <a href="products.html#transistor">Transistor Optocouplers</a>
+          <a href="products.html#darlington">Darlington Optocouplers</a>
+          <a href="products.html#high-speed">High-Speed Isolation Amplifier Optocouplers</a>
+          <a href="products.html#triac">Triac Optocouplers</a>
+          <a href="products.html#ssr">Solid-State Relay SSR Optocouplers</a>
+          <a href="products.html#igbt">IGBT Isolation Drivers</a>
+          <a href="products.html#schmitt">Schmitt Trigger Optocouplers</a>
+          <a href="products.html#ipm">IPM Gate Driver Interface Optocouplers</a>
+          <a href="products.html#photovoltaic">Photovoltaic Output Optocouplers</a>
+        </nav>
+      </aside>
+    </div>
 
     <main>
       <section class="hero" id="home">
@@ -38,7 +64,7 @@
             distributors, and engineering teams outside China.
           </p>
           <div class="hero-actions">
-            <a class="primary-link" href="#product">View Products</a>
+            <a class="primary-link" href="#product-menu" data-product-menu-trigger>View Products</a>
             <a class="secondary-link" href="#contact">Request Quote</a>
           </div>
         </div>
@@ -134,6 +160,53 @@
         </div>
 
         <div class="product-grid">
+          <article class="product-card">
+            <div class="chip"><span>IG</span></div>
+            <p>IGBT Isolation Driver</p>
+            <h3>OR-3120</h3>
+            <span>IGBT / MOSFET gate drive optocoupler</span>
+            <div class="replacement-list" aria-label="OR-3120 replacement models">
+              <strong>Replace without Compromise</strong>
+              <ul>
+                <li>HCPL-3120</li>
+                <li>FOD3120</li>
+                <li>TLP250H</li>
+                <li>TLP350</li>
+                <li>PS9505</li>
+                <li>VO3120</li>
+                <li>LTV3120</li>
+              </ul>
+            </div>
+            <div class="datasheet-list" aria-label="OR-3120 datasheet download">
+              <strong>Datasheets</strong>
+              <div>
+                <a href="assets/datasheets/or-3120-datasheet.pdf" download>Datasheet</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="chip"><span>6N</span></div>
+            <p>6N13X Series</p>
+            <h3>OR-6N135</h3>
+            <span>High-speed isolation optocoupler</span>
+            <div class="replacement-list" aria-label="OR-6N135 replacement models">
+              <strong>Replace without Compromise</strong>
+              <ul>
+                <li>ACPL6N135</li>
+                <li>FODM6N135M</li>
+                <li>VOL6N135</li>
+                <li>LTV6N135</li>
+                <li>EL6N135</li>
+                <li>Sharp-6N135</li>
+              </ul>
+            </div>
+            <div class="datasheet-list" aria-label="OR-6N135 datasheet download">
+              <strong>Datasheets</strong>
+              <div>
+                <a href="assets/datasheets/or-6n135-datasheet.pdf" download>Datasheet</a>
+              </div>
+            </div>
+          </article>
           <article class="product-card">
             <div class="chip"><span>3H</span></div>
             <p>3HX Series</p>
@@ -321,49 +394,14 @@
             </div>
           </article>
           <article class="product-card">
-            <div class="chip"><span>6N</span></div>
-            <p>6N13X Series</p>
-            <h3>OR-6N135</h3>
-            <span>High-speed isolation optocoupler</span>
-            <div class="replacement-list" aria-label="OR-6N135 replacement models">
-              <strong>Replace without Compromise</strong>
-              <ul>
-                <li>ACPL6N135</li>
-                <li>FODM6N135M</li>
-                <li>VOL6N135</li>
-                <li>LTV6N135</li>
-                <li>EL6N135</li>
-                <li>Sharp-6N135</li>
-              </ul>
-            </div>
-            <div class="datasheet-list" aria-label="OR-6N135 datasheet download">
+            <div class="chip"><span>IPM</span></div>
+            <p>IPM Gate Driver Interface</p>
+            <h3>OR-480</h3>
+            <span>IPM gate driver interface optocoupler</span>
+            <div class="datasheet-list" aria-label="OR-480 datasheet download">
               <strong>Datasheets</strong>
               <div>
-                <a href="assets/datasheets/or-6n135-datasheet.pdf" download>Datasheet</a>
-              </div>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="chip"><span>H11</span></div>
-            <p>H11LX Series</p>
-            <h3>OR-H11L1</h3>
-            <span>Schmitt trigger optocoupler</span>
-            <div class="datasheet-list" aria-label="OR-H11L1 datasheet download">
-              <strong>Datasheets</strong>
-              <div>
-                <a href="assets/datasheets/or-h11l1-datasheet.pdf" download>Datasheet</a>
-              </div>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="chip"><span>PV</span></div>
-            <p>Photovoltaic Output</p>
-            <h3>OR-357PVG</h3>
-            <span>Photovoltaic output driver</span>
-            <div class="datasheet-list" aria-label="OR-357PVG datasheet download">
-              <strong>Datasheets</strong>
-              <div>
-                <a href="assets/datasheets/or-357pvg-datasheet.pdf" download>Datasheet</a>
+                <a href="assets/datasheets/or-480-datasheet.pdf" download>Datasheet</a>
               </div>
             </div>
           </article>
